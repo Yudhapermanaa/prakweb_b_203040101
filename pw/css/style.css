@@ -18,8 +18,13 @@
   src: url("../assets/font/Galada.ttf");
 }
 
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(209, 204, 250);
 }
 
 .title {

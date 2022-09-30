@@ -6,7 +6,7 @@ $bk = query("SELECT * FROM buku WHERE id = $id")[0];
 if (isset($_POST['ubah'])) {
     if (ubah($_POST) > 0) {
         echo "<script>alert('Data Berhasil diubah!');
-		document.location.href = 'admin.php';
+		document.location.href = '../index.php';
 		</script>";
     } else {
         echo "<script>alert('Data Gagal diubah!');
@@ -83,7 +83,7 @@ if (isset($_POST['ubah'])) {
                     </div>
                     <div class="mb-3 btn-tambah pt-2 ">
                         <button class="btn btn-primary shadow-sm" type="submit" name="ubah" style="font-size: 14px; margin-right: 13px;"><i class="bi bi-pencil-square"></i> Ubah Data</button>
-                        <a href="admin.php"><button class="btn btn-info text-light" type="button" style="font-size: 14px;">Kembali</button></a>
+                        <a href="../index.php"><button class="btn btn-info text-light" type="button" style="font-size: 14px;">Kembali</button></a>
                     </div>
                 </div>
             </form>

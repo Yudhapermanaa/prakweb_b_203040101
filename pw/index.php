@@ -1,6 +1,6 @@
 <?php
 
-require 'functions.php';
+require 'php/functions.php';
 $buku = query("SELECT * FROM buku");
 
 ?>
@@ -11,9 +11,9 @@ $buku = query("SELECT * FROM buku");
 <head>
     <meta charset="UTF-8">
     <title>YudhaBook</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -42,7 +42,7 @@ $buku = query("SELECT * FROM buku");
             <h2 class="mb-3 text-center" style="color: rgb(49, 0, 165);">List Produk Buku</h2>
             <!-- <hr class="hr-produk" style="margin-top: 15px; margin-bottom: 50px;"> -->
             <div class="kotak-tabel rounded-3">
-                <a href="tambah.php" class="btn btn-primary shadow-sm mb-3" style="font-size: 14px;"><i class="bi bi-plus-circle"></i> Tambah Data</a>
+                <a href="php/tambah.php" class="btn btn-primary shadow-sm mb-3" style="font-size: 14px;"><i class="bi bi-plus-circle"></i> Tambah Data</a>
                 <table class="table table-bordered text-center">
                     <thead style="background-color: rgb(132, 110, 255); color: white;">
                         <tr>
@@ -66,10 +66,10 @@ $buku = query("SELECT * FROM buku");
                             <td><?= $b['penerbit_buku']; ?></td>
                             <td><?= $b['tanggal_terbit']; ?></td>
                             <td><?= $b['deskripsi_buku']; ?></td>
-                            <td class="text-center"><img src="../assets/img/buku/<?= $b['gambar']; ?>" alt="" width="80" height="120"></td>
+                            <td class="text-center"><img src="assets/img/buku/<?= $b['gambar']; ?>" alt="" width="80" height="120"></td>
                             <td class="text-center" style="font-size: 16px;">
-                                <a href="ubah.php?id=<?= $b['id'] ?>"><i class="bi bi-pencil-square"></i></a>
-                                <a href="hapus.php?id=<?= $b['id'] ?>" onclick="return confirm('Yakin akan dihapus??')"><i class=" bi bi-trash"></i></a>
+                                <a href="php/ubah.php?id=<?= $b['id'] ?>"><i class="bi bi-pencil-square"></i></a>
+                                <a href="php/hapus.php?id=<?= $b['id'] ?>" onclick="return confirm('Yakin akan dihapus??')"><i class=" bi bi-trash"></i></a>
                             </td>
                         </tr>
                         <?php $i++; ?>
