@@ -24,7 +24,7 @@ if (isset($_POST['tambah'])) {
     <title>Halaman Tambah Data</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
 
 <body>
@@ -34,15 +34,7 @@ if (isset($_POST['tambah'])) {
             <a class="navbar-brand">
                 YUDHA<span class="span">Book.com </span>
             </a>
-            <div class="input-group" style="width: 400px;">
-                <input type="search" class="form-control" placeholder="Username" style="background-color: aquamarine;">
-                <span class="input-group-text" style="background-color: aquamarine;"><i class="bi bi-search"></i></span>
-            </div>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-capitalize" href="">Masuk</a>
-                </li>
-            </ul>
+
         </div>
     </nav>
     <!-- Akhir Navbar -->
@@ -77,7 +69,7 @@ if (isset($_POST['tambah'])) {
                         <label for="gambar" class="form-label">Masukkan Gambar</label>
                         <input class="form-control" type="file" id="gambar"name="gambar" required>
                     </div>
-                    <div class="mb-3 btn-tambah pt-2 ">	    
+                    <div class="mb-1 btn-tambah pt-2 ">	    
                         <button class="btn btn-primary shadow-sm" type="submit" name="tambah" style="font-size: 14px; margin-right: 13px;"><i class="bi bi-plus-circle"></i> Tambah Data</button>
                         <a href="../index.php"><button class="btn btn-info text-light" type="button" style="font-size: 14px;">Kembali</button></a>
                     </div>

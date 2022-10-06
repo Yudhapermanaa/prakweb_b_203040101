@@ -97,16 +97,19 @@ function ubah($data)
 	$tanggal_terbit = htmlspecialchars($data['tanggal_terbit']);
 	$deskripsi_buku = htmlspecialchars($data['deskripsi_buku']);
 
-	$gambar = upload();
-	if (!$gambar) {
-		return false;
-	}
-
-	if ($gambar == 'nophoto.png') {
+	if ($_FILES['gambar']['error'] === 4) {
 		$gambar = $gambar_lama;
+	} else {
+		$gambar = upload();
 	}
 
-	$query = "UPDATE buku SET judul_buku = '$judul_buku', penulis_buku = '$penulis_buku', penerbit_buku = '$penerbit_buku', tanggal_terbit = '$tanggal_terbit', deskripsi_buku = '$deskripsi_buku' WHERE id = '$id' ";
+	$query = "UPDATE buku SET 
+					judul_buku = '$judul_buku', 
+					penulis_buku = '$penulis_buku', 
+					penerbit_buku = '$penerbit_buku', 
+					tanggal_terbit = '$tanggal_terbit', 
+					deskripsi_buku = '$deskripsi_buku', 
+					gambar = '$gambar' WHERE id = '$id' ";
 
 	mysqli_query($conn, $query);
 
@@ -124,4 +127,22 @@ function hapus($id)
 
 	mysqli_query($conn, "DELETE FROM buku WHERE id = $id") or die(mysqli_error($conn));
 	return mysqli_affected_rows($conn);
+}
+
+function cari($keyword)
+{
+	$conn = koneksi();
+
+	$query = "SELECT * FROM buku WHERE 
+	judul_buku LIKE '%$keyword%' OR 
+	penulis_buku LIKE '%$keyword%' OR 
+	penerbit_buku LIKE '%$keyword%' ";
+
+	$result = mysqli_query($conn, $query);
+
+	$rows = [];
+	while ($row = mysqli_fetch_assoc($result)) {
+		$rows[] = $row;
+	}
+	return $rows;
 }

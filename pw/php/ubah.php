@@ -26,7 +26,7 @@ if (isset($_POST['ubah'])) {
     <title>Halaman Ubah Data</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
 
 <body>
@@ -36,15 +36,6 @@ if (isset($_POST['ubah'])) {
             <a class="navbar-brand">
                 YUDHA<span class="span">Book.com </span>
             </a>
-            <div class="input-group" style="width: 400px;">
-                <input type="search" class="form-control" placeholder="Username" style="background-color: aquamarine;">
-                <span class="input-group-text" style="background-color: aquamarine;"><i class="bi bi-search"></i></span>
-            </div>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-capitalize" href="">Masuk</a>
-                </li>
-            </ul>
         </div>
     </nav>
     <!-- Akhir Navbar -->
@@ -54,6 +45,7 @@ if (isset($_POST['ubah'])) {
         <div class="container">
             <form class="form-tambah" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="id" id="id" value="<?= $bk['id']; ?>">
+                <input type="hidden" name="gambar_lama" value="<?= $bk['gambar']; ?>">
                 <h2 class="mb-3 text-center" style="color: rgb(49, 0, 165);">Form Ubah Data Buku</h2>
                 <div class="kotak rounded-3 row justify-content-center">
                     <div class="mb-3 col-md-6">
@@ -77,7 +69,6 @@ if (isset($_POST['ubah'])) {
                         <textarea class="form-control" id="deskripsi_buku" rows="6" name="deskripsi_buku" value="" required><?= $bk['deskripsi_buku']; ?></textarea>
                     </div>
                     <div class="mb-3 col-md-12">
-                        <input type="hidden" name="gambar_lama" value="<?= $bk['gambar']; ?>">
                         <label for="gambar" class="form-label">Masukkan Gambar</label>
                         <input class="form-control" type="file" id="gambar" name="gambar">
                     </div>
