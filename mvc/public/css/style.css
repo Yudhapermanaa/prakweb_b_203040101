@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Beckman";
+    src: url("../assets/font/Beckman.otf");
+}
+
+@font-face {
+    font-family: "Caviar Dreams";
+    src: url("../assets/font/CaviarDreams.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Caviar Dreams Bold";
+    src: url("../assets/font/CaviarDreams_Bold.ttf") format("truetype");
+  }
+
+section {
+    font-family: "Caviar Dreams";
+}
+
+/* Style Navbar */
+.navbar {
+    background-color: rgb(255, 255, 255);
+    font-family: "Caviar Dreams";
+}
+.navbar-brand {
+    font-weight: bold;
+}
+.navbar-brand, .nav-link {
+    color: rgb(64, 50, 77);
+}
+
+/* Style Jumbotron */
+.jumbotron {
+    background: linear-gradient(rgb(230, 230, 230), rgb(255, 255, 255));
+    font-family: "Caviar Dreams";
+}
+
+/* Style Daftar Mahasiswa  */
+.daftar-mahasiswa {
+    margin-left: -53px;
+}
+
+/* Style Card */
+.card {
+    background: linear-gradient(rgb(230, 230, 230), rgb(255, 255, 255));
+}
+
+
+
+
+

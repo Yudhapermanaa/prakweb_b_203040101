@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman <?= $data['judul']; ?></title>
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light shadow-sm">
+    <nav class="navbar navbar-expand-lg shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="<?= BASEURL; ?>/home">PHP MVC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
